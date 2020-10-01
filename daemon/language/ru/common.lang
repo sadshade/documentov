@@ -1,0 +1,5 @@
+[info]
+datetime_format = 02.01.2006 15:04:05
+system_name = Documentov
+system_email = Электропочта
+log_format_text = <br>%s %s %s %s #дата+время инициатор объект описание - для текстового поля

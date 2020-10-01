@@ -1,0 +1,77 @@
+[error]
+get = Ошибка при получении действия (UID=%s): %s
+get_type = Ошибка при загрузке типа действия %s (UID=%s, %s): %s, JSON: %s  
+load_route_actions = Ошибка при загрузке действий точки маршрута (UID=%s): %s
+load_route_actions_scan = Ошибка при чтении действий точки маршрута (UID=%s): %s
+load_field_method_params = Ошибка при загрузке поля в параметрах действия (UID=%s): %s
+add_action_in_notexist_route = Ошибка при добавлении действия в несуществующую точку маршрута: %+v
+add_action = Ошибка при записи действия (UID=%s) в базу данных: %s Через 1 секунду попробуем еще раз
+edit_action_route_not_exist = Ошибка при редактировании действия (UID=%s) - действие ссылается на несуществующую точку маршрута (UID=%s): %s
+action_not_found = Ошибка при получении действия (UID=%s) типа документа: действие не найдено
+not_started = Ошибка при запуске подсистемы действий. Перезагрузите демон. Ошибка: %s
+parsing_params_action = Ошибка при загрузке параметров действия (UID=%s, тип: %s): %s
+delete_db = Ошибка при удалении действия (UID=%s) из базы данных: %s 
+json_encode_params = Ошибка при кодировании параметров действия в JSON (%+v): %s
+json_decode_params = Ошибка при декодировании JSON параметров действия (UID=%s, тип=%s): %s
+unknown_type_action = Неизвестный тип действия: %s (UID=%s)
+action_move = Указанный идентификатор (%s) не является ни точкой маршрута, ни идентификатором поля
+action_record_execute = Ошибка при выполнении действия Запись (UID=%s) в документе (UID=%s, %s, метод: %T): %s
+action_record_no_target_field_uid = Ошибка в действии Запись (UID=%s): действие настроено на запись в несуществующее поле (UID=%s)
+action_record_target_field_uid_not_found = Ошибка в действии Запись (UID=%s): поле с идентификатором целевого поля (UID=%s) пустое
+action_record_no_target_document_uid = Ошибка в действии Запись (UID=%s) при получении идентификатора документа для записи значения из поля (UID=%s): %s
+action_record_no_target_documents = Не найдены документя для записи в действии Запись (UID=%s, документы из поля UID=%s)
+action_conditions_parse_action = Ошибка при загрузке типа действия %s внутри Условия (UID=%s): %s (JSON: %s)
+ma_conditions_no_fieldmethod_arg = Ошибка в действии Условие: в аргументе условия не загружен метод поля %s
+ma_conditions_comparison = Ошибка при обработке условий сравнения действия Условие (UID=%s, %s): %s
+ma_email_no_address_field_uid = Ошибка в действии Электропочта (UID=%s): на найдено поле с адресатом
+ma_email_no_file_field_uid = Ошибка в действии Электропочта (UID=%s): на найдено поле с файлов
+ma_email_create_dir = Ошибка создания директории для действия Электропочта: %s
+ma_email_copy_file = Ошибка при копировании файла из файлового хранилища для отправки действием Электропочта: %s
+ma_email_address = Ошибка в действии Электропочта при получении адресата: %s
+ma_email_address2 = Ошибка при получении адресатов для электронных писем в действии Электропочта (UID=%s): %s
+ma_email_send = Письмо "%s" для %s добавлено в очередь
+ma_selection_get_document = Ошибка при получении списка документов из поля в действии Выборка (UID=%s) в документе (UID=%s, %s): %s
+ma_selection_get_doctype = Ошибка при получении типов документов из поля в действии Выборка (UID=%s) в документе (UID=%s, %s): %s
+ma_selection_get_value_confition = Ошибка при получении значения для условия из поля в действии Выборка (UID=%s) в документе (UID=%s, тип документа: %s, точка: %s): %s
+ma_notification_no_recipient_fuid = Не указано поле с сотрудниками для уведомления
+ma_notification_no_recipient = Нет сотрудников для уведомления
+ma_notification_get_recipient = Ошибка при получении значения поля с сотрудниками для уведомления: %s
+ma_notification_no_document_fuid = Не указано поле с документами для уведомления
+ma_notification_no_document = Нет документов для уведомления
+ma_notification_get_document = Ошибка при получении значения поля с документами для уведомления: %s
+ma_notification_deleted = Удалены уведомления
+ma_notification_sent = Отправлено уведомление "%s" в адрес: %s
+ma_notification_sent_more = и еще %d сотр.
+ma_notification_update_db = Ошибка в действии Уведомление при обновлении базы данных: %s
+ma_notification_delete_db = Ошибка в действии Уведомление при удалении уведомлений из базы данных: %s
+
+[info]
+action_name = Контекст: %s, Действие: %s
+title_access = Доступ
+title_autopress = Автонажатие
+title_condition = Условие
+title_creation = Создание
+title_dialog = Диалог
+title_edit = Редактирование
+title_email = Электропочта
+title_export_f = Экспорт в файл
+title_http_request = HTTP-запрос
+title_import_f = Импорт из файла
+title_message = Сообщение
+title_move = Перемещение
+title_notification = Уведомление
+title_print = Печать
+title_record = Запись
+title_redirect = Перенаправление
+title_remove = Удаление
+title_report = Генератор отчетов
+title_selection = Выборка
+title_signer_kz = ЭЦП (Казахстан)
+title_timer = Таймер
+subsystem_started = Подсистема действий запущена
+ma_record_ok_value = В поле "%s" <a href="%s">документа</a> записано значение "%s"
+ma_record_ok_value_setting_field = В настроечное поле "%s" записано значение "%s"
+ma_condition_true = Условие верно
+ma_condition_false = Условие ложно
+ma_selection_no_documents = Нет документов для выборки в поле (UID=%s)
+ma_selection_no_doctype = Не указан тип документа для выборки
